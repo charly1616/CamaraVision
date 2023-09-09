@@ -122,9 +122,9 @@ class GeometricDrawingRun {
 }
 
 public class BasicGeometricDrawing {
-    public static void main(String[] args) {
-        // Load the native library.
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-        new GeometricDrawingRun().run();
-    }
+//    public static void main(String[] args) {
+//        // Load the native library.
+//        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+//        new GeometricDrawingRun().run();
+//    }
 }

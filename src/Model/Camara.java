@@ -13,6 +13,9 @@ public class Camara extends JFrame{
         this.setVisible(true);
     }
     
-    
+    public static void main(String[] args) {
+        // Load the native library.
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+    }
     
 }
