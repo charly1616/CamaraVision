@@ -84,7 +84,7 @@ public class Camara extends JFrame{
                 if (name == null){
                     name = new SimpleDateFormat("yyyy-mm-dd-hh-mm-ss").format(new Date());
                 }
-                //Escribir en archivopsss juanda por favor
+                //Escribir en archivopsss
                 Imgcodecs.imwrite("images/"+name+".jpg", imagen);
                 clicked = false;
             }
