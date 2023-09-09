@@ -30,8 +30,8 @@ public class Camara extends JFrame{
     
     
     
-    
-    public Camara(){
+    //Constructor, se instancia la camara
+    public Camara(){ 
         //diseño de la UI
         setLayout(null);
         camaraScreen = new JLabel();
@@ -58,8 +58,8 @@ public class Camara extends JFrame{
     
     
     
-    
-    public void startCamera(){
+    //Guardar la imagen
+    public void startCamera(){ 
         captura = new VideoCapture(0);
         imagen = new Mat();
         byte[] DataImagen;
@@ -74,8 +74,8 @@ public class Camara extends JFrame{
             final MatOfByte but = new MatOfByte();
             Imgcodecs.imencode(".jpg", imagen, but);
             DataImagen = but.toArray();
-            //Añadir esto al JLabel
             
+            //Añadir esto al JLabel
             icon = new ImageIcon(DataImagen);
             camaraScreen.setIcon(icon);
             
@@ -93,7 +93,7 @@ public class Camara extends JFrame{
     
     
     
-    
+    //Ejecutable, se crea una camara para ejecutarla
     public static void main(String[] args) {
         // Load the native library.
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
