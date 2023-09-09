@@ -55,6 +55,10 @@ public class Camara extends JFrame{
         this.setVisible(true);
     }
     
+    
+    
+    
+    
     public void startCamera(){
         captura = new VideoCapture(0);
         imagen = new Mat();
@@ -86,6 +90,7 @@ public class Camara extends JFrame{
             }
         }
     }
+    
     
     
     
