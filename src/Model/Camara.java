@@ -5,6 +5,8 @@ import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.ImageIcon;
@@ -48,6 +50,18 @@ public class Camara extends JFrame{
                 clicked = true;
             }
         });
+        
+        
+        this.addWindowListener(new WindowAdapter(){
+            @Override
+            public void windowClosing(WindowEvent e){
+                super.windowClosing(e);
+                captura.release();
+                imagen.release();
+                System.exit(0);
+            }
+        });
+        
         
         this.setSize(new Dimension(600,600));
         setLocationRelativeTo(null);
