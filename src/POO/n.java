@@ -1,5 +1,6 @@
 
-package images;
+package POO;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.opencv.core.*;
@@ -7,11 +8,12 @@ import org.opencv.imgproc.Imgproc;
 import org.opencv.videoio.VideoCapture;
 import org.opencv.highgui.HighGui;
 
-public class drtgdf {
+public class n{
     static {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     }
-     public static void main(String[] args) {
+
+    public static void main(String[] args) {
         VideoCapture capture = new VideoCapture(0); // Abre la cámara, 0 para la cámara predeterminada
         if (!capture.isOpened()) {
             System.out.println("No se pudo abrir la cámara.");
@@ -67,4 +69,3 @@ public class drtgdf {
         HighGui.destroyAllWindows();
     }
 }
-
